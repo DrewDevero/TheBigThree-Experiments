@@ -1,2 +1,2 @@
 # TheBigThree-Experiments
-Experimenting with HTML, CSS, and Javascript(vanilla and JQuery)
+Experimenting with the big front-end three: HTML, CSS, and Javascript(vanilla and JQuery).
