@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="UA-X-Compatible" type="ie=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="Alston Drew Devero-Belfon"/>
+    <meta name="description" content="This is my webpage, there are many webpages, but this one is mine!"/>
+    <meta name="keywords" content="webpage, html, name, content, online, internet"/>
+    <link rel="stylesheet" type="text/css" href=".\_styles/Experiments-stylesheet.css"/>
+    <title>This Is An Outstanding Webpage!!!</title>
+</head>
+    <body style="color:blue">
+<div style="display: inline-block">
+<button type="button" id="textColor">Change Color!</button>
+</br>
+<span>&nbsp; &nbsp; &nbsp; &nbsp; These words technomagically change color!!!</span>
+</div>
+
+        <header>
+            <time datetime="2020-06-28" style=" display:inline-block; position:absolute; top:0%; left:75%; text-align:right; font-size:3rem;">It's June 28, 2020!!!
+            </time>
+            <nav> &nbsp; &nbsp;<a href="#" targt="_blank"><b><em>Oh boy a navigation link</b></em></a></nav>
+        </header>
+
+            <main>
+                <h1>here we go!</h1>
+                <h2 id="intro"> and there we are. . .</h2>
+                <h2 class="selectors">. . . and will be.</h2>
+                    <div style="text-align:center;">
+                        <button type="button" id="bgChange">Change Background Color!</button>
+                    </div>
+                    <div style="text-align:center;">
+                    <button type="button" id="numbers">Random Number Between 1 & 10</button>
+                        <div id="showNum" style="font-size: 10rem;">0</div>
+                    </div>
+                    <div id="content">
+                    </div>
+                    <div id="moreContent">
+                    </div>
+                <article>
+                    <section>
+                        <p>
+                            This is some goooood text.
+                        </p>
+                        <p class="selectors">
+                            This is also some goooood text.
+                        </p>
+                        <p>
+                            This is quite an excellent paragraph.
+                        </p>
+                    </section>
+                    <section>
+                        <div id="example1">This text will change</div>
+                        <aside>
+                        </aside>
+                    </section> 
+                    <section>
+                        <aside>
+                        </aside>
+                    </section>
+                </article>
+            </main>
+        <footer>
+        </footer>
+<script type="text/javascript" src=".\_scripts/Experiments-javascript.js"></script>
+<script type="text/javascript" src="..\..\jquery-3.5.1.js"></script>
+<script> 
+    $("document").ready(function() {
+     setTimeout( () => $("#content").append('<p style="color:orange; background:purple;">The page just loaded</p>'), 1500);
+        })
+    $("document").ready(function() { 
+        // $("p").css("border", "1.5rem solid red");
+        // $(".selectors").css("border", "1.5rem solid red");
+        // $("#intro").css("border", "1.5rem solid red");
+        // $("p:first").css("border", "1.5rem solid red");
+        $("h2:not(.selectors)").css("border", "1.5rem solid red");
+    });
+    // Creating new content:
+    // The following generates 
+    // - original html shows for 2 seconds on page load completion 
+    // - then original html disapears for 2 seconds 
+    // - then original html is replaced with appended text alone for 2 seconds
+    // - then prepended text is immediately added
+    var newP = $("<p>");
+    setTimeout( () => newP.append("<em>This text has changed.</em>"), 4000);
+    setTimeout( () => newP.prepend("Now there is also a prepend to this changed text. "), 6000);
+    setTimeout( () => $("#example1").html(newP), 2000); 
+</script>
+    </body>
+</html>

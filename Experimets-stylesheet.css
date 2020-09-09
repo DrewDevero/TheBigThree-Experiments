@@ -1,0 +1,78 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#textColor {
+    width:10rem; 
+    height: 1.3rem;
+    cursor: pointer;
+}
+h1 {
+    font: darkgrey;
+    font-size: 50px;    
+    font-family: verdana, geneva, times, serif, robato;
+    font-style: italic;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+    background: orangered;
+    padding: 2.5rem;
+    border: 2rem solid rgba(12, 24, 235, 0.35);
+    border-radius: 80%;
+    margin: 3rem 25rem 3rem;
+    position: relative;
+}
+h1::before {
+    content:"";
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2rem solid rgba(78, 23, 189, 0.45);
+    border-radius: 80%;
+    position: absolute;
+    right: 80%;
+    bottom: 20%;
+    z-index: 0;
+    transition: all 1.0s linear;
+}
+h1::after {
+    content:"";
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2rem solid rgba(194, 116, 15, 0.45);
+    border-radius: 80%;
+    position: absolute;
+    left: 80%;
+    top: 20%;
+    z-index: 0;
+    transition: all 1.0s linear;
+}
+h1:hover::before {
+    right: 0;
+    bottom: 0;
+}
+h1:hover::after {
+    left: 0;
+    top: 0; 
+}
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 40px;
+    }
+}
+#bgChange {
+    margin: 1rem;
+    padding: 0.5rem;
+    height: 25vh;
+    width: 40vw;
+    color: red;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 0.5rem solid rgba(255, 0, 0, 0.685);
+    border-radius: 20%;
+    cursor: pointer;
+    outline: transparent;
+}
